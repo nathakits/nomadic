@@ -2,7 +2,7 @@
   div
     my-header
     <nuxt/>
-    my-footer
+    //- my-footer
 </template>
 
 <script>

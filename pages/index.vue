@@ -1,7 +1,7 @@
 <template lang='pug'>
 
 main(id='home')
-    div Nomadical
+    p(style="color:white;") Nomadical
 </template>
 
 <script>
