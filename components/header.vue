@@ -1,19 +1,37 @@
 <template lang="pug">
 
-header.grid.justifyContent-between.header-container.alignItems-center
-	nuxt-link.logo-link(to="/")
-		h1.logotype(title="Nathakit Sae-Tan") NST
-
-	//- add width to nav-links for multiple links
-	div.grid.justifyContent-between.nav-links
-		nuxt-link.logo-link(to="/info")
-			h4 Info
-		//- placeholder
-		//- nuxt-link.logo-link(to="/info")
-		//- 	h4 Info
-		//- nuxt-link.logo-link(to="/info")
-		//- 	h4 Info
-		//- nuxt-link.logo-link(to="/info")
-		//- 	h4 Info
+v-toolbar(fixed flat style="padding:0 70px 0 70px;")
+	v-toolbar-title(style="font-weight:bold;") Nomadical
+	v-spacer
+	div(style="width:400px;padding-right:80px;")
+		v-chip(
+			color="primary"
+			text-color="white"
+			style="width:100%;"
+			)
+			v-text-field(
+				prepend-icon="search"
+				hide-details
+				single-line
+				label="Search"
+				)
+	v-toolbar-items
+		v-btn(flat :ripple="false") Submit your space
 
 </template>
+
+<style lang="stylus">
+
+.chip__content
+	width 95%
+
+.input-group__details
+	all unset
+
+	&::before
+		all unset
+
+	&::after
+		all unset
+
+</style>
