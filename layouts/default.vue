@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  v-app
     my-header
     <nuxt/>
     //- my-footer
