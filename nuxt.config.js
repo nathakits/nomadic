@@ -8,8 +8,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Meta description' }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
-      { rel: 'styleshhet', href: 'https://fonts.googleapis.com/css?family=Open+Sans'},
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Karla' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons'},
     ]
   },
@@ -37,6 +36,7 @@ module.exports = {
   build: {
     vendor: [
       'vue-progressive-image',
+      'vuetify'
     ],
     extend (config, { isDev, isClient, isServer }) {
       const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
@@ -46,6 +46,7 @@ module.exports = {
 
   plugins: [
     { src: "~/plugins/vue-progressive-image.js", ssr: false },
+    { src: "~/plugins/vuetify.js", ssr: false },
     // { src: "~/plugins/ga.js", ssr: false }
   ],
 
