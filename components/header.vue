@@ -1,7 +1,7 @@
 <template lang="pug">
 
 v-toolbar(fixed flat style="padding:0 70px 0 70px;")
-	v-toolbar-title(style="font-weight:bold;") Nomadical
+	v-toolbar-title(style="font-weight:bold;") Nomadics
 	v-spacer
 	div(style="width:400px;padding-right:80px;")
 		v-chip(
