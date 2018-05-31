@@ -29,13 +29,14 @@ v-content(style="margin-top:64px;padding-top:200px;")
             )
                 v-card(raised)
                     v-card-media(
-                        :src="`https://unsplash.it/150/300?image=${Math.floor(Math.random() * 100) + 1}`"
+                        :src="place.src"
                         height="165px"
                     )
                     v-card-title
                         div
                             h3.headline.mb-0 {{ place.title }}
                             div {{ place.location }} . {{ place.type }}
+                            div {{ place.date }}
 
 </template>
 
@@ -44,33 +45,32 @@ console.log('%c Designed and made by Nathakit Sae-Tan ', 'background: #222; colo
 
 export default {
     data: () => ({
-        places: [
-            {
-                title: 'Luka',
-                src: 'https://vuetifyjs.com/static/doc-images/cards/house.jpg',
-                location: 'Sathorn',
-                type: 'Cafe'
-            },
-            {
-                title: 'Phil Coffee',
-                src: 'https://vuetifyjs.com/static/doc-images/cards/road.jpg',
-                location: 'Phrakanong',
-                type: 'Cafe'
-            },
-            {
-                title: 'Happy Ending',
-                src: 'https://vuetifyjs.com/static/doc-images/cards/plane.jpg',
-                location: 'Rama 1',
-                type: 'Restaurant'
-            },
-            {
-                title: 'Ceresia',
-                src: 'https://vuetifyjs.com/static/doc-images/cards/plane.jpg',
-                location: 'Phrompong',
-                type: 'Cafe'
-            }
-        ]
-    })
+        // places: [
+        //     {
+        //         title: 'Luka',
+        //         src: 'https://vuetifyjs.com/static/doc-images/cards/house.jpg',
+        //         location: 'Sathorn',
+        //         type: 'Cafe',
+        //         date: '20-May-2018'
+        //     },
+        //     {
+        //         title: 'Phil Coffee',
+        //         src: 'https://vuetifyjs.com/static/doc-images/cards/road.jpg',
+        //         location: 'Phrakanong',
+        //         type: 'Cafe',
+        //         date: '20-May-2018'
+        //     },
+        // ],
+        places: []
+    }),
+    mounted () {
+        this.$axios.$get('l/la-monita.json')
+            .then(response => (
+                    // console.log(response))
+                    this.places.push(response)
+                )
+            )
+    }
 }
 </script>
 
