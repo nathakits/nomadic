@@ -14,7 +14,8 @@ module.exports = {
   },
 
   modules: [
-		'@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/axios',
 	],
 
   dev: (process.env.NODE_ENV !== 'production'),
