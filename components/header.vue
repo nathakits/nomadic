@@ -8,13 +8,13 @@ v-toolbar(fixed flat style="padding:0 70px 0 70px;")
 			color="primary"
 			text-color="white"
 			style="width:100%;"
-			)
+		)
 			v-text-field(
 				prepend-icon="search"
 				hide-details
 				single-line
 				label="Search"
-				)
+			)
 	v-toolbar-items
 		v-btn(flat :ripple="false") Submit your space
 
