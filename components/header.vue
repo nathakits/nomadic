@@ -16,7 +16,10 @@ v-toolbar(fixed flat style="padding:0 70px 0 70px;")
 				label="Search"
 			)
 	v-toolbar-items
-		v-btn(flat :ripple="false") Submit your space
+		<!-- v-btn(flat :ripple="false") Submit your space -->
+	a.bmc-button(target="_blank" href="https://www.buymeacoffee.com/avJCVZs29")
+		img(src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee")
+		span(style="margin-left:5px") Buy me a coffee
 
 </template>
 
