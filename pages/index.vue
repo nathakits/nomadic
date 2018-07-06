@@ -35,7 +35,7 @@ v-content(style="margin-top:64px;padding-top:200px;")
                         ) All areas
                         v-list
                             v-list-tile(
-                                v-for="(item, index) in items"
+                                v-for="(item, index) in allAreas"
                                 :key="index"
                                 @click=""
                             )
@@ -52,7 +52,7 @@ v-content(style="margin-top:64px;padding-top:200px;")
                     style="padding:20px 0 20px 0;"
                 )
                     v-flex(
-                        v-for="place in places"
+                        v-for="place in allPlaces"
                         :key="place.title"
                         xs3
                     )
@@ -91,17 +91,21 @@ console.log('%c Designed and made by Nathakit Sae-Tan ', 'background: #222; colo
 
 export default {
     data: () => ({
-        places: '',
-        items: [
-            { title: 'Ari'},
-            { title: 'Thonglor'}
-        ]
+        allPlaces: '',
+        allAreas: '',
     }),
     methods: {
         getPlaces: function () {
             this.$axios.$get('json/places.json')
                 .then(response => (
-                        this.places = response
+                        this.allPlaces = response
+                    )
+                )
+        },
+        getAreas: function () {
+            this.$axios.$get('json/areas.json')
+                .then(response => (
+                        this.allAreas = response
                     )
                 )
         },
@@ -110,12 +114,13 @@ export default {
         currentDay: function () {
             let d = new Date()
             let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            console.log(days[d.getDay()])
+            // console.log(days[d.getDay()])
             return days[d.getDay()]
         },
     },
-    mounted () {
+    beforeMount () {
         this.getPlaces()
+        this.getAreas()
         // this.$nextTick(function() {
         //     var el = this.header
         //     var style = window.getComputedStyle(el, null);
