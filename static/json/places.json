@@ -1,47 +1,7 @@
 [
     {
-        "title": "La Monita",
-        "src": "https://vuetifyjs.com/static/doc-images/cards/house.jpg",
-        "location": "Sathorn",
-        "type": "Cafe",
-        "wifi_down": "18.5",
-        "wifi_up": "10.9",
-        "password": "ilovecoffee",
-        "date": "20-May-2018",
-        "opening_times": [
-            {
-                "day": "Monday",
-                "time": "730am-630pm"
-            },
-            {
-                "day": "Tuesday",
-                "time": "730am-630pm"
-            },
-            {
-                "day": "Wednesday",
-                "time": "730am-630pm"
-            },
-            {
-                "day": "Thursday",
-                "time": "730am-630pm"
-            },
-            {
-                "day": "Friday",
-                "time": "730am-630pm"
-            },
-            {
-                "day": "Saturday",
-                "time": "Closed"
-            },
-            {
-                "day": "Sunday",
-                "time": "730am-630pm"
-            }
-        ]
-    },
-    {
         "title": "Luka",
-        "src": "https://vuetifyjs.com/static/doc-images/cards/house.jpg",
+        "src": "./imgs/luka.jpg",
         "location": "Sathorn",
         "type": "Cafe",
         "wifi_down": "18.5",
@@ -81,7 +41,7 @@
     },
     {
         "title": "Happy Ending",
-        "src": "https://vuetifyjs.com/static/doc-images/cards/house.jpg",
+        "src": "./imgs/happy_ending.jpg",
         "location": "Rama 1",
         "type": "Cafe",
         "wifi_down": "18.5",
@@ -120,8 +80,8 @@
         ]
     },
     {
-        "title": "Phill Cafe",
-        "src": "https://vuetifyjs.com/static/doc-images/cards/house.jpg",
+        "title": "Phil Coffee",
+        "src": "./imgs/phil_coffee.jpg",
         "location": "Promphong",
         "type": "Cafe",
         "wifi_down": "18.5",
@@ -161,7 +121,7 @@
     },
     {
         "title": "Casa Lapin",
-        "src": "https://vuetifyjs.com/static/doc-images/cards/house.jpg",
+        "src": "./imgs/casa_lapin_x26.jpg",
         "location": "Sathorn",
         "type": "Cafe",
         "wifi_down": "18.5",
@@ -201,7 +161,7 @@
     },
     {
         "title": "Starbucks",
-        "src": "https://vuetifyjs.com/static/doc-images/cards/house.jpg",
+        "src": "./imgs/bitterman.jpg",
         "location": "Sathorn",
         "type": "Cafe",
         "wifi_down": "18.5",
@@ -241,7 +201,7 @@
     },
     {
         "title": "Chaba",
-        "src": "https://vuetifyjs.com/static/doc-images/cards/house.jpg",
+        "src": "./imgs/bitterman.jpg",
         "location": "Rama 1",
         "type": "Cafe",
         "wifi_down": "18.5",
@@ -281,7 +241,47 @@
     },
     {
         "title": "Milk plus",
-        "src": "https://vuetifyjs.com/static/doc-images/cards/house.jpg",
+        "src": "./imgs/bitterman.jpg",
+        "location": "Promphong",
+        "type": "Cafe",
+        "wifi_down": "18.5",
+        "wifi_up": "10.9",
+        "password": "ilovecoffee",
+        "date": "20-May-2018",
+        "opening_times": [
+            {
+                "day": "Monday",
+                "time": "730am-630pm"
+            },
+            {
+                "day": "Tuesday",
+                "time": "730am-630pm"
+            },
+            {
+                "day": "Wednesday",
+                "time": "730am-630pm"
+            },
+            {
+                "day": "Thursday",
+                "time": "730am-630pm"
+            },
+            {
+                "day": "Friday",
+                "time": "730am-630pm"
+            },
+            {
+                "day": "Saturday",
+                "time": "730am-630pm"
+            },
+            {
+                "day": "Sunday",
+                "time": "730am-630pm"
+            }
+        ]
+    },
+    {
+        "title": "Bitterman",
+        "src": "./imgs/bitterman.jpg",
         "location": "Promphong",
         "type": "Cafe",
         "wifi_down": "18.5",
