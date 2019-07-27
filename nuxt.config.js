@@ -32,10 +32,6 @@ module.exports = {
     vendor: [
       'vuetify'
     ],
-    extend (config, { isDev, isClient, isServer }) {
-      const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
-      urlLoader.options.limit = 2000 // 2kb
-    }
   },
 
   plugins: [
