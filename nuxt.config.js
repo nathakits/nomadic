@@ -18,12 +18,6 @@ module.exports = {
     '@nuxtjs/axios',
 	],
 
-  dev: (process.env.NODE_ENV !== 'production'),
-
-  env: {
-    baseUrl: process.env.BASE_URL || 'http://0.0.0.0:8000'
-  },
-
   manifest: {
     name: "Nathakit Sae-Tan",
     description: "Nathakit Sae-Tan",
@@ -36,7 +30,6 @@ module.exports = {
 
   build: {
     vendor: [
-      'vue-progressive-image',
       'vuetify'
     ],
     extend (config, { isDev, isClient, isServer }) {
@@ -46,12 +39,7 @@ module.exports = {
   },
 
   plugins: [
-    { src: "~/plugins/vue-progressive-image.js", ssr: false },
     { src: "~/plugins/vuetify.js", ssr: false },
     // { src: "~/plugins/ga.js", ssr: false }
-  ],
-
-  generate: {
-    dir: 'dist'
-  }
+  ]
 }
