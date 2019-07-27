@@ -57,7 +57,7 @@ v-content(style="margin-top:64px;padding-top:200px;")
                         xs3
                     )
                         v-card(raised)
-                            v-card-media(
+                            v-img(
                                 :src="place.src"
                                 height="165px"
                             )
@@ -88,27 +88,14 @@ v-content(style="margin-top:64px;padding-top:200px;")
 
 <script>
 
+import allAreas from '~/static/json/areas.json'
+import allPlaces from '~/static/json/places.json'
+
 export default {
     data: () => ({
-        allPlaces: '',
-        allAreas: '',
+        allPlaces,
+        allAreas,
     }),
-    methods: {
-        getPlaces: function () {
-            this.$axios.$get('json/places.json')
-                .then(response => (
-                        this.allPlaces = response
-                    )
-                )
-        },
-        getAreas: function () {
-            this.$axios.$get('json/areas.json')
-                .then(response => (
-                        this.allAreas = response
-                    )
-                )
-        },
-    },
     computed: {
         currentDay: function () {
             let d = new Date()
@@ -116,25 +103,7 @@ export default {
             // console.log(days[d.getDay()])
             return days[d.getDay()]
         },
-    },
-    beforeMount () {
-        this.getPlaces()
-        this.getAreas()
-        // this.$nextTick(function() {
-        //     var el = this.header
-        //     var style = window.getComputedStyle(el, null);
-        //     this._maxWidth = style.maxWidth
-        //     this._marginLeft = style.marginLeft
-
-        //     window.addEventListener('resize', function(e) {
-        //         var _el = this.header
-        //         var _style = window.getComputedStyle(_el, null);
-        //         var computedMarginLeft = parseInt(_style.marginLeft, 10) - 200 + 'px'
-        //         var computedMaxWidth = parseInt(_style.maxWidth, 10) + 200 + 'px'
-        //         this._maxWidth = computedMaxWidth
-        //         this._marginLeft = computedMarginLeft
-        //     })
-        // })
+    }
     }
 }
 </script>
