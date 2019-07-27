@@ -87,7 +87,6 @@ v-content(style="margin-top:64px;padding-top:200px;")
 </template>
 
 <script>
-console.log('%c Designed and made by Nathakit Sae-Tan ', 'background: #222; color: #fff; font-size: 15px;')
 
 export default {
     data: () => ({
