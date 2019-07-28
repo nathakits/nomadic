@@ -104,7 +104,6 @@ export default {
             return days[d.getDay()]
         },
     }
-    }
 }
 </script>
 
@@ -128,3 +127,4 @@ export default {
     box-shadow 0 0 30px rgba(0,0,0,0.2)
     border-radius 5px
 </style>
+ç
